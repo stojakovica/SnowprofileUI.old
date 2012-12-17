@@ -1,0 +1,39 @@
+apply plugin:'application'
+apply plugin:'java'
+apply plugin:'eclipse'
+
+
+mainClassName = 'at.ac.dbisinformatik.snowprofile.app.ServerMain'
+	
+repositories {
+	mavenCentral()
+	maven {
+        	url "http://maven.restlet.org"
+    	}
+}
+
+dependencies {
+	testCompile 'org.testng:testng:6.7'
+	testCompile 'org.easymock:easymock:3.0'
+		
+	compile 'org.picocontainer:picocontainer:2.14.1'
+	compile 'org.apache.commons:commons-lang3:3.0.1'
+	compile 'commons-collections:commons-collections:3.2.1'
+	compile 'commons-io:commons-io:2.1'
+	compile 'org.restlet.jse:org.restlet:2.0.10'
+	compile 'org.restlet.jse:org.restlet.ext.fileupload:2.0.10'
+	compile 'com.orientechnologies:orient-commons:1.2.0'
+	compile 'com.orientechnologies:orientdb-core:1.2.0'
+	compile 'xalan:xalan:2.7.1'
+	compile 'commons-cli:commons-cli:20040117.000000'
+	compile 'org.mozilla:rhino:1.7R3'
+	compile 'org.json:json:20080701'
+	compile 'com.google.code.gson:gson:2.1'
+	compile 'org.apache.xmlgraphics:fop:0.93'
+	compile 'javax.servlet:servlet-api:2.5'
+
+}
+
+test {
+	useTestNG()
+}
